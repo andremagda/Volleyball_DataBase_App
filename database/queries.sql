@@ -102,6 +102,10 @@ CREATE TABLE Clubmembers (
 	FOREIGN KEY (teams_id) REFERENCES Teams(teams_id) ON DELETE CASCADE
 );
 
+ALTER TABLE Clubmembers
+ADD email VARCHAR(255),
+ADD deactivation_date DATE;
+
 CREATE TABLE associated_with (
 	familymember_id INT,
 	clubmember_id INT,
