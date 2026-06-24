@@ -242,6 +242,7 @@ tr:hover {
 }
 
 .load-btn {
+    width: auto;
     background-color: #0078d7;
     color: white;
     border: none;
@@ -257,7 +258,7 @@ tr:hover {
 
 /* ----------------UPDATE SECTION-------------- */
 
-.edit-section {
+.update-section {
     width: 80%;
     max-width: 1000px;
     margin: 40px auto;
@@ -267,9 +268,20 @@ tr:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.edit-section h2 {
+.update-section h2 {
     color: #0078d7;
     margin-bottom: 30px;
+}
+
+.update-section label {
+    font-weight: 500;
+}
+
+.update-section input[type="number"] {
+    width: 180px;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
 }
 
 .form-row {
@@ -286,7 +298,7 @@ tr:hover {
 }
 
 .load-btn {
-    width: 100%;
+    width: auto;
     background-color: #0078d7;
     color: white;
     border: none;

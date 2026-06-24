@@ -93,7 +93,7 @@ if ($personnel_id) {
 </head>
 <body>
 <h1>Volleyball Club</h1>
-<section class="form-section">
+<section class="update-section">
     
     <h2>Edit Personnel</h2>
 
@@ -111,64 +111,77 @@ if ($personnel_id) {
         <form method="post" action="update_personnel.php">
             <label for="prompt_personnel_id">Enter Personnel ID to Edit:</label>
             <input type="number" name="prompt_personnel_id" required>
-            <input type="submit" value="Load Personnel">
+            <input type="submit" value="Load Personnel" class="load-btn">
         </form>
     <?php elseif ($personnel): ?>
         <!-- Edit form for the selected personnel -->
         <form method="post" action="update_personnel.php">
             <input type="hidden" name="personnel_id" value="<?php echo htmlspecialchars($personnel['personnel_id']); ?>">
 
+            <div class="form-row">
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name" value="<?php echo htmlspecialchars($personnel['first_name']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name" value="<?php echo htmlspecialchars($personnel['last_name']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="date_of_birth">Date of Birth:</label>
             <input type="date" name="date_of_birth" value="<?php echo htmlspecialchars($personnel['date_of_birth']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="ssn">SSN:</label>
             <input type="text" name="ssn" maxlength="15" value="<?php echo htmlspecialchars($personnel['ssn']); ?>" required>
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="medicare">Medicare:</label>
             <input type="text" name="medicare" maxlength="15" value="<?php echo htmlspecialchars($personnel['medicare']); ?>" required>
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="telephone_number">Telephone Number:</label>
             <input type="text" name="telephone_number" maxlength="15" value="<?php echo htmlspecialchars($personnel['telephone_number']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="address">Address:</label>
             <input type="text" name="address" value="<?php echo htmlspecialchars($personnel['address']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="city">City:</label>
             <input type="text" name="city" value="<?php echo htmlspecialchars($personnel['city']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="province">Province:</label>
             <input type="text" name="province" value="<?php echo htmlspecialchars($personnel['province']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="postal_code">Postal Code:</label>
             <input type="text" name="postal_code" maxlength="7" value="<?php echo htmlspecialchars($personnel['postal_code']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="email">Email:</label>
             <input type="email" name="email" value="<?php echo htmlspecialchars($personnel['email']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="mandate">Mandate:</label>
             <select name="mandate">
                 <option value="volunteer" <?php echo $personnel['mandate'] === 'volunteer' ? 'selected' : ''; ?>>Volunteer</option>
                 <option value="salaried" <?php echo $personnel['mandate'] === 'salaried' ? 'selected' : ''; ?>>Salaried</option>
             </select>
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="working_role">Working Role:</label>
             <select name="working_role">
                 <option value="administrator" <?php echo $personnel['working_role'] === 'administrator' ? 'selected' : ''; ?>>Administrator</option>
@@ -182,13 +195,17 @@ if ($personnel_id) {
                 <option value="manager" <?php echo $personnel['working_role'] === 'manager' ? 'selected' : ''; ?>>Manager</option>
                 <option value="other" <?php echo $personnel['working_role'] === 'other' ? 'selected' : ''; ?>>Other</option>
             </select>
-            <br><br>
+            </div>
 
-            <input type="submit" value="Update Personnel">
+            <input type="submit" value="Update Personnel" class="load-btn">
         </form>
     <?php endif; ?>
 
-    <p><a href="../personnel/view_personnel.php">Back to Personnel List</a></p>
+     <div class="button-row">
+        <a href="../personnel/view_personnel.php" class="btn">Back to Personnel List</a>
+        <a href="../main.php" class="btn">Back to Main Page</a>
+    </div>
+    </section>
 
 </body>
 </html>

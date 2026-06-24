@@ -128,6 +128,7 @@ if ($clubmember_id) {
         <a href="view_clubmembers.php" class="btn">Club Members List</a>
         <a href="../main.php" class="btn">Back to Main Page</a>
     </div>
+    
     </section>
 </body>
 </html>

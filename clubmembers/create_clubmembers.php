@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="weight">Weight (kg):</label>
         <input type="number" name="weight">
         </div>
-
+    
         <div class="form-row">
         <label for="ssn">SSN:</label>
         <input type="text" name="ssn" maxlength="15" required>

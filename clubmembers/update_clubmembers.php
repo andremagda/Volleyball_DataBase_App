@@ -101,7 +101,7 @@ if ($clubmember_id) {
 </head>
 <body>
 <h1>Volleyball Club</h1>
-<section class="form-section">
+<section class="update-section">
 
     <h2>Edit Club Member</h2>
 
@@ -222,7 +222,10 @@ if ($clubmember_id) {
         </form>
     <?php endif; ?>
 
-    <a href="../clubmembers/view_clubmembers.php">Back to Club Members List</a>
+     <div class="button-row">
+        <a href="view_clubmembers.php" class="btn">Club Members List</a>
+        <a href="../main.php" class="btn">Back to Main Page</a>
+    </div>
     </section>
 </body>
 </html>

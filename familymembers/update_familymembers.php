@@ -91,8 +91,8 @@ if ($familymember_id) {
 </head>
 <body>
 <h1>Volleyball Club</h1>
-<section class="form-section">
-    
+<section class="update-section">
+
     <h2>Edit Family Member</h2>
 
     <?php
@@ -109,66 +109,81 @@ if ($familymember_id) {
         <form method="post" action="update_familymembers.php">
             <label for="prompt_familymember_id">Enter Family Member ID to Edit:</label>
             <input type="number" name="prompt_familymember_id" required>
-            <input type="submit" value="Load Family Member">
+            <input type="submit" value="Load Family Member" class="load-btn">
         </form>
     <?php elseif ($family_member): ?>
         <!-- Edit form for the selected family member -->
         <form method="post" action="update_familymembers.php">
             <input type="hidden" name="familymember_id" value="<?php echo htmlspecialchars($family_member['familymember_id']); ?>">
 
+            <div class="form-row">
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name" value="<?php echo htmlspecialchars($family_member['first_name']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name" value="<?php echo htmlspecialchars($family_member['last_name']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="date_of_birth">Date of Birth:</label>
             <input type="date" name="date_of_birth" value="<?php echo htmlspecialchars($family_member['date_of_birth']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="ssn">SSN:</label>
             <input type="text" name="ssn" maxlength="15" value="<?php echo htmlspecialchars($family_member['ssn']); ?>" required>
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="telephone_number">Telephone Number:</label>
             <input type="text" name="telephone_number" maxlength="15" value="<?php echo htmlspecialchars($family_member['telephone_number']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="address">Address:</label>
             <input type="text" name="address" value="<?php echo htmlspecialchars($family_member['address']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="city">City:</label>
             <input type="text" name="city" value="<?php echo htmlspecialchars($family_member['city']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="province">Province:</label>
             <input type="text" name="province" value="<?php echo htmlspecialchars($family_member['province']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="postal_code">Postal Code:</label>
             <input type="text" name="postal_code" maxlength="7" value="<?php echo htmlspecialchars($family_member['postal_code']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="email">Email:</label>
             <input type="email" name="email" value="<?php echo htmlspecialchars($family_member['email']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="medicare">Medicare:</label>
             <input type="text" name="medicare" maxlength="15" value="<?php echo htmlspecialchars($family_member['medicare']); ?>" required>
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="familymember2_id">Related Family Member ID:</label>
             <input type="number" name="familymember2_id" value="<?php echo htmlspecialchars($family_member['familymember2_id']); ?>">
-            <br><br>
+            </div>
 
-            <input type="submit" value="Update Family Member">
+            <input type="submit" value="Update Family Member" class="load-btn">
         </form>
     <?php endif; ?>
 
-    <p><a href="../familymembers/display_familymembers.php">Back to Family Members List</a></p>
-
+     <div class="button-row">
+        <a href="../familymembers/display_familymembers.php" class="btn">Back to Family Members List</a>
+        <a href="../main.php" class="btn">Back to Main Page</a>
+    </div>
+    </section>
 </body>
 </html>

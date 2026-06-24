@@ -82,7 +82,7 @@ if ($location_id) {
 </head>
 <body>
 <h1>Volleyball Club</h1>
-<section class="form-section">
+<section class="update-section">
     
     <h2>Edit Location</h2>
 
@@ -97,60 +97,73 @@ if ($location_id) {
 
     <?php if (!$location_id): ?>
         <!-- Prompt form to enter location_id -->
-        <form method="post" action="edit_locations.php">
+        <form method="post" action="update_locations.php">
             <label for="prompt_location_id">Enter Location ID to Edit:</label>
             <input type="number" name="prompt_location_id" required>
-            <input type="submit" value="Load Location">
+            <input type="submit" value="Load Location" class="load-btn">
         </form>
     <?php elseif ($location): ?>
         <!-- Edit form for the selected location -->
-        <form method="post" action="edit_locations.php">
+        <form method="post" action="update_locations.php">
             <input type="hidden" name="location_id" value="<?php echo htmlspecialchars($location['location_id']); ?>">
 
+            <div class="form-row">
             <label for="location_name">Location Name:</label>
             <input type="text" name="location_name" value="<?php echo htmlspecialchars($location['location_name']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="address">Address:</label>
             <input type="text" name="address" value="<?php echo htmlspecialchars($location['address']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="city">City:</label>
             <input type="text" name="city" value="<?php echo htmlspecialchars($location['city']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="province">Province:</label>
             <input type="text" name="province" value="<?php echo htmlspecialchars($location['province']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="postal_code">Postal Code:</label>
             <input type="text" name="postal_code" maxlength="7" value="<?php echo htmlspecialchars($location['postal_code']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="web_address">Web Address:</label>
             <input type="text" name="web_address" value="<?php echo htmlspecialchars($location['web_address']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="max_capacity">Max Capacity:</label>
             <input type="number" name="max_capacity" value="<?php echo htmlspecialchars($location['max_capacity']); ?>">
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="location_type">Location Type:</label>
             <select name="location_type">
                 <option value="head" <?php echo $location['location_type'] === 'head' ? 'selected' : ''; ?>>Head</option>
                 <option value="branch" <?php echo $location['location_type'] === 'branch' ? 'selected' : ''; ?>>Branch</option>
             </select>
-            <br><br>
+            </div>
 
+            <div class="form-row">
             <label for="phone_number">Phone Number:</label>
             <input type="text" name="phone_number" maxlength="15" value="<?php echo htmlspecialchars($location['phone_number']); ?>">
-            <br><br>
+            </div>
 
-            <input type="submit" value="Update Location">
+            <input type="submit" value="Update Location" class="load-btn">
         </form>
     <?php endif; ?>
 
-    <p><a href="../locations/display_locations.php">Back to Locations List</a></p>
+     <div class="button-row">
+        <a href="../locations/view_locations.php" class="btn">Back to Locations List</a>
+        <a href="../main.php" class="btn">Back to Main Page</a>
+    </div>
+    </section>
 
 </body>
 </html>
