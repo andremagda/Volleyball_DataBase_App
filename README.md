@@ -22,7 +22,7 @@ Examples of entities include:
 - Locations
 - Payments
 
-![ER Diagram](../images/ER_diagram.png)
+![ER Diagram](css/images/ER_diagram.png)
 
 ### 2. Relational Database Design
 
@@ -33,7 +33,7 @@ The ER model was transformed into a relational schema with:
 - Relationship Constraints
 - Data Integrity Rules
 
-![Relational Schema](../images/schema_diagram.png)
+![Relational Schema](css/images/schema_diagram.png)
 
 ### 3. Database Implementation
 
@@ -65,7 +65,7 @@ Features include (CRUD operations):
 - Update records
 - Delete records
 
-![WEB Interations](../images/volley_web.gif)
+![WEB Interations](css/images/volley_web.gif)
 
 ## Technologies Used
 
